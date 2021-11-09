@@ -1,10 +1,8 @@
-kind: pipeline
-type: docker
-name: default
-   
-steps:
-- name: test
+kind: template
+load: template1.yaml
+data:
+  name: build-from-template
   image: alpine
   commands:
-  - echo hello
-  - echo world
+    - echo hello
+    - echo world
